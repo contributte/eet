@@ -16,7 +16,7 @@ class ReceiptBuilder
 	public static function create(string $idStore, string $idCashRegister, string $serialNumber, string $taxPayer): self
 	{
 		$instance = new self();
-		$instance->receipt->uuid_zpravy = Uuid::uuid4();
+		$instance->receipt->uuid_zpravy = Uuid::uuid4()->toString();
 		$instance->receipt->dat_trzby = Nette\Utils\DateTime::from('now');
 		$instance->receipt->id_provoz = $idStore;
 		$instance->receipt->id_pokl = $idCashRegister;
