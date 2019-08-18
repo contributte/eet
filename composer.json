@@ -30,10 +30,7 @@
   "autoload": {
     "psr-4": {
       "Contributte\\EET\\": "src/Contributte/EET"
-    },
-    "classmap": [
-      "src/Contributte/EET/exceptions.php"
-    ]
+    }
   },
   "autoload-dev": {
     "psr-4": {
