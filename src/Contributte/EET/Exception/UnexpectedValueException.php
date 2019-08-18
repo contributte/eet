@@ -1,11 +1,8 @@
-<?php
+<?php declare(strict_types = 1);
 
-namespace Contributte\EET;
-
-interface EETException extends \Throwable
-{
-}
+namespace Contributte\EET\Exception;
 
 class UnexpectedValueException extends \UnexpectedValueException implements EETException
 {
+
 }

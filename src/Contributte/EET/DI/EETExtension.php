@@ -1,23 +1,25 @@
-<?php declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace Contributte\EET\DI;
 
-use Contributte\EET\UnexpectedValueException;
-use Nette\DI\CompilerExtension;
+use Contributte\EET\Exception\UnexpectedValueException;
 use FilipSedivy\EET;
+use Nette\DI\CompilerExtension;
 
 class EETExtension extends CompilerExtension
 {
+
+	/** @var mixed[] */
 	public $defaults = [
 		'certificate' => [
 			'file' => null,
-			'password' => ''
+			'password' => '',
 		],
 
 		'dispatcher' => [
 			'service' => EET\Dispatcher::PLAYGROUND_SERVICE,
-			'validate' => true
-		]
+			'validate' => true,
+		],
 	];
 
 	public function loadConfiguration(): void
@@ -27,20 +29,21 @@ class EETExtension extends CompilerExtension
 		$builder = $this->getContainerBuilder();
 
 		if (empty($config['certificate']['file'])) {
-			throw new UnexpectedValueException("Please configure certificate using the '{$this->name}:' section in your config file.");
+			throw new UnexpectedValueException(sprintf('Please configure certificate using the \'%s\' section in your config file.', $this->name));
 		}
 
 		$builder->addDefinition($this->prefix('certificate'))
 			->setFactory(EET\Certificate::class, [
 				$config['certificate']['file'],
-				$config['certificate']['password']
+				$config['certificate']['password'],
 			]);
 
 		$builder->addDefinition($this->prefix('dispatcher'))
 			->setFactory(EET\Dispatcher::class, [
 				$this->prefix('@certificate'),
 				$config['dispatcher']['service'],
-				$config['dispatcher']['validate']
+				$config['dispatcher']['validate'],
 			]);
 	}
+
 }
