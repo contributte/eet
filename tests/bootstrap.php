@@ -8,4 +8,4 @@ if (@!include __DIR__ . '/../vendor/autoload.php') {
 }
 
 Environment::setup(__DIR__);
-define('DATA_DIR', __DIR__ . '/data');
+Environment::setupVariable('DATA_DIR', __DIR__ . '/data');
