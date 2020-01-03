@@ -36,7 +36,7 @@ class ExtensionTest extends TestCase
 			],
 		], __METHOD__);
 
-		Assert::exception(function () use ($container): void {
+		Assert::exception(static function () use ($container): void {
 			$container->getService('eet.dispatcher');
 		}, CertificateExportFailedException::class);
 	}
@@ -62,7 +62,7 @@ class ExtensionTest extends TestCase
 	private function buildContainer(array $config = [], ?string $key = null): Container
 	{
 		$loader = new ContainerLoader(TEMP_DIR, true);
-		$class = $loader->load(function (Compiler $compiler) use ($config): void {
+		$class = $loader->load(static function (Compiler $compiler) use ($config): void {
 			$compiler
 				->addExtension('eet', new EETExtension())
 				->addConfig($config);
