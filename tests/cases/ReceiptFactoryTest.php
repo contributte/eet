@@ -6,7 +6,6 @@ use Tester;
 use Tester\Assert;
 use Contributte;
 use Nette;
-use DateTime;
 
 require __DIR__ . '/../bootstrap.php';
 
@@ -30,14 +29,6 @@ class ReceiptFactoryTest extends Tester\TestCase
 		$receipt = $factory->create();
 
 		Assert::same($receipt->dic_popl, 'CZ1234');
-	}
-
-	public function testDefaultReceipt(): void
-	{
-		$receipt = new Contributte\EET\Receipt();
-
-		Assert::type('string', $receipt->uuid_zpravy);
-		Assert::type(new DateTime(), $receipt->dat_trzby);
 	}
 }
 
