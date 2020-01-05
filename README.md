@@ -19,6 +19,7 @@ Ultra easy-to-use [`filipsedivy/php-eet`](https://github.com/filipsedivy/php-eet
 ## Documentation
 
 - [Setup](.docs/README.md#setup)
+- [Configuration](#configuration)
 - [Usage](.docs/README.md#usage)
 
 ## Maintainers
