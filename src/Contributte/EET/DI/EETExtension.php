@@ -1,48 +1,55 @@
-<?php declare(strict_types = 1);
+<?php declare(strict_types=1);
 
 namespace Contributte\EET\DI;
 
-use Contributte\EET\Exception\UnexpectedValueException;
-use FilipSedivy\EET;
-use Nette\DI\CompilerExtension;
+use FilipSedivy;
+use Contributte;
+use Nette;
+use Nette\Schema\Expect;
+use stdClass;
 
-class EETExtension extends CompilerExtension
+/**
+ * @property      stdClass $config
+ */
+class EETExtension extends Nette\DI\CompilerExtension
 {
+	public function getConfigSchema(): Nette\Schema\Schema
+	{
+		return Expect::structure([
+			'certificate' => Expect::structure([
+				'file' => Expect::string()->required(),
+				'password' => Expect::string()->required()
+			]),
 
-	/** @var mixed[] */
-	public $defaults = [
-		'certificate' => [
-			'file' => null,
-			'password' => '',
-		],
+			'dispatcher' => Expect::structure([
+				'service' => Expect::string(FilipSedivy\EET\Dispatcher::PLAYGROUND_SERVICE),
+				'validate' => Expect::bool(true)
+			]),
 
-		'dispatcher' => [
-			'service' => EET\Dispatcher::PLAYGROUND_SERVICE,
-			'validate' => true,
-		],
-	];
+			'receipt' => Expect::array()
+		]);
+	}
 
 	public function loadConfiguration(): void
 	{
-		$config = $this->validateConfig($this->defaults, $this->config);
-
 		$builder = $this->getContainerBuilder();
 
-		if (empty($config['certificate']['file'])) {
-			throw new UnexpectedValueException(sprintf('Please configure certificate using the \'%s\' section in your config file.', $this->name));
-		}
-
-		$builder->addDefinition($this->prefix('certificate'))
-			->setFactory(EET\Certificate::class, [
-				$config['certificate']['file'],
-				$config['certificate']['password'],
+		$builder->addDefinition($this->prefix('certificateFactory'))
+			->setFactory(Contributte\EET\CertificateFactory::class, [
+				$this->config->certificate->file,
+				$this->config->certificate->password
 			]);
 
-		$builder->addDefinition($this->prefix('dispatcher'))
-			->setFactory(EET\Dispatcher::class, [
-				$this->prefix('@certificate'),
-				$config['dispatcher']['service'],
-				$config['dispatcher']['validate'],
+		$builder->addDefinition($this->prefix('clientFactory'))
+			->setFactory(Contributte\EET\ClientFactory::class, [
+				$this->prefix('@certificateFactory'),
+				$this->config->dispatcher->service,
+				$this->config->dispatcher->validate,
+			]);
+
+		$builder->addDefinition($this->prefix('receiptFactory'))
+			->setFactory(Contributte\EET\ReceiptFactory::class, [
+				Nette\Utils\ArrayHash::from((array)$this->config->receipt)
 			]);
 	}
 
