@@ -1,9 +1,10 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace Contributte\EET;
 
 class ClientFactory
 {
+
 	/** @var CertificateFactory */
 	private $certificateFactory;
 
@@ -26,4 +27,5 @@ class ClientFactory
 
 		return new Dispatcher($certificate, $this->service, $this->validate);
 	}
+
 }

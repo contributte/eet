@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace Contributte\EET;
 
@@ -6,6 +6,7 @@ use Nette\Utils\ArrayHash;
 
 class ReceiptFactory
 {
+
 	/** @var ArrayHash */
 	private $params;
 
@@ -26,4 +27,5 @@ class ReceiptFactory
 
 		return $receipt;
 	}
+
 }

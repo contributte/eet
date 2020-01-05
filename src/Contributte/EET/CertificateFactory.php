@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 namespace Contributte\EET;
 
@@ -6,6 +6,7 @@ use FilipSedivy;
 
 class CertificateFactory
 {
+
 	/** @var string */
 	private $file;
 
@@ -22,4 +23,5 @@ class CertificateFactory
 	{
 		return new FilipSedivy\EET\Certificate($this->file, $this->password);
 	}
+
 }

@@ -1,9 +1,9 @@
-<?php declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace Contributte\EET\DI;
 
-use FilipSedivy;
 use Contributte;
+use FilipSedivy;
 use Nette;
 use Nette\Schema\Expect;
 use stdClass;
@@ -13,20 +13,21 @@ use stdClass;
  */
 class EETExtension extends Nette\DI\CompilerExtension
 {
+
 	public function getConfigSchema(): Nette\Schema\Schema
 	{
 		return Expect::structure([
 			'certificate' => Expect::structure([
 				'file' => Expect::string()->required(),
-				'password' => Expect::string()->required()
+				'password' => Expect::string()->required(),
 			]),
 
 			'dispatcher' => Expect::structure([
 				'service' => Expect::string(FilipSedivy\EET\Dispatcher::PLAYGROUND_SERVICE),
-				'validate' => Expect::bool(true)
+				'validate' => Expect::bool(true),
 			]),
 
-			'receipt' => Expect::array()
+			'receipt' => Expect::array(),
 		]);
 	}
 
@@ -37,7 +38,7 @@ class EETExtension extends Nette\DI\CompilerExtension
 		$builder->addDefinition($this->prefix('certificateFactory'))
 			->setFactory(Contributte\EET\CertificateFactory::class, [
 				$this->config->certificate->file,
-				$this->config->certificate->password
+				$this->config->certificate->password,
 			]);
 
 		$builder->addDefinition($this->prefix('clientFactory'))
@@ -49,7 +50,7 @@ class EETExtension extends Nette\DI\CompilerExtension
 
 		$builder->addDefinition($this->prefix('receiptFactory'))
 			->setFactory(Contributte\EET\ReceiptFactory::class, [
-				Nette\Utils\ArrayHash::from((array)$this->config->receipt)
+				Nette\Utils\ArrayHash::from((array) $this->config->receipt),
 			]);
 	}
 
