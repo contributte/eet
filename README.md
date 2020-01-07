@@ -14,9 +14,9 @@
 
 ## Version
 
-| State       | Version      | Branch   | PHP      | Composer                                        |
-|-------------|--------------|----------|----------|-------------------------------------------------|
-| development | `dev-master` | `master` | `>= 7.1` | `minimum-stability: dev`, `prefer-stable: true` |
+| State | Version      | Branch   | Nette  | PHP      |
+|-------|--------------|----------|--------|----------|
+| dev   | `dev-master` | `master` | `3.0+` | `>= 7.1` |
 
 ## Documentation
 
