@@ -1,12 +1,10 @@
 ![](https://heatbadger.now.sh/github/contributte/eet/)
 
 <p align="center">
-
   <a href="https://travis-ci.org/contributte/eet"><img src="https://img.shields.io/travis/contributte/eet.svg?style=flat-square"></a>
   <a href="https://coveralls.io/r/contributte/eet"><img src="https://img.shields.io/coveralls/contributte/eet.svg?style=flat-square"></a>
   <a href="https://packagist.org/packages/contributte/eet"><img src="https://img.shields.io/packagist/dm/contributte/eet.svg?style=flat-square"></a>
   <a href="https://packagist.org/packages/contributte/eet"><img src="https://img.shields.io/packagist/v/contributte/eet.svg?style=flat-square"></a>
-
 </p>
 
 ## Version
