@@ -1,6 +1,6 @@
-# EET
+![](https://heatbadger.now.sh/github/contributte/eet/)
 
-Ultra easy-to-use [`filipsedivy/php-eet`](https://github.com/filipsedivy/php-eet) implementation for [`Nette Framework`](https://github.com/nette/).
+<p align=center>
 
 [![Build Status](https://img.shields.io/travis/contributte/eet.svg?style=flat-square)](https://travis-ci.org/contributte/eet)
 [![Code coverage](https://img.shields.io/coveralls/contributte/eet.svg?style=flat-square)](https://coveralls.io/r/contributte/eet)
@@ -9,6 +9,8 @@ Ultra easy-to-use [`filipsedivy/php-eet`](https://github.com/filipsedivy/php-eet
 [![Downloads total](https://img.shields.io/packagist/dt/contributte/eet.svg?style=flat-square)](https://packagist.org/packages/contributte/eet)
 [![Latest stable](https://img.shields.io/packagist/v/contributte/eet.svg?style=flat-square)](https://packagist.org/packages/contributte/eet)
 [![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
+
+</p>
 
 ## Version
 
