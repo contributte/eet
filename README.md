@@ -7,6 +7,11 @@
   <a href="https://packagist.org/packages/contributte/eet"><img src="https://img.shields.io/packagist/v/contributte/eet.svg?style=flat-square"></a>
 </p>
 
+<p align=center>
+    Website 🚀 <a href="https://contributte.org">contributte.org</a> | Contact 👨🏻‍💻 <a href="https://filipsedivy.cz">filipsedivy.cz</a> | Twitter 🐦 <a href="https://twitter.com/contributte">@contributte</a>
+</p>
+
+
 ## Version
 
 | State | Version      | Branch   | Nette  | PHP      |
