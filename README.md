@@ -2,13 +2,10 @@
 
 <p align=center>
 
-[![Build Status](https://img.shields.io/travis/contributte/eet.svg?style=flat-square)](https://travis-ci.org/contributte/eet)
-[![Code coverage](https://img.shields.io/coveralls/contributte/eet.svg?style=flat-square)](https://coveralls.io/r/contributte/eet)
-[![Licence](https://img.shields.io/packagist/l/contributte/eet.svg?style=flat-square)](https://packagist.org/packages/contributte/eet)
-[![Downloads this Month](https://img.shields.io/packagist/dm/contributte/eet.svg?style=flat-square)](https://packagist.org/packages/contributte/eet)
-[![Downloads total](https://img.shields.io/packagist/dt/contributte/eet.svg?style=flat-square)](https://packagist.org/packages/contributte/eet)
-[![Latest stable](https://img.shields.io/packagist/v/contributte/eet.svg?style=flat-square)](https://packagist.org/packages/contributte/eet)
-[![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
+  <a href="https://travis-ci.org/contributte/eet"><img src="https://img.shields.io/travis/contributte/eet.svg?style=flat-square"></a>
+  <a href="https://coveralls.io/r/contributte/eet"><img src="https://img.shields.io/coveralls/contributte/eet.svg?style=flat-square"></a>
+  <a href="https://packagist.org/packages/contributte/eet"><img src="https://img.shields.io/packagist/dm/contributte/eet.svg?style=flat-square"></a>
+  <a href="https://packagist.org/packages/contributte/eet"><img src="https://img.shields.io/packagist/v/contributte/eet.svg?style=flat-square"></a>
 
 </p>
 
