@@ -31,29 +31,17 @@ composer install contributte/eet
 |-------|--------------|----------|--------|----------|
 | dev   | `dev-master` | `master` | `3.0+` | `>= 7.1` |
 
+## Development
 
-## Maintainers
+See [how to contributte](https://contributte.org) to this package. This package is currently maintaining by these authors.
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-        <a href="https://github.com/filipsedivy">
-            <img width="150" height="150" src="https://avatars2.githubusercontent.com/u/5647591?v=3&s=150">
-        </a>
-        </br>
-        <a href="https://github.com/filipsedivy">Filip Šedivý</a>
-      </td>
-      <td align="center">
-        <a href="https://github.com/f3l1x">
-            <img width="150" height="150" src="https://avatars2.githubusercontent.com/u/538058?v=3&s=150">
-        </a>
-        </br>
-        <a href="https://github.com/f3l1x">Milan Felix Šulc</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<a href="https://github.com/f3l1x">
+    <img width="80" height="80" src="https://avatars2.githubusercontent.com/u/538058?v=3&s=80">
+</a>
+<a href="https://github.com/filipsedivy">
+    <img width="80" height="80" src="https://avatars0.githubusercontent.com/u/5647591?s=80&v=4">
+</a>
+
 
 -----
 
