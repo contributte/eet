@@ -13,6 +13,15 @@
 |-------|--------------|----------|--------|----------|
 | dev   | `dev-master` | `master` | `3.0+` | `>= 7.1` |
 
+## Usage
+
+To install latest version of `contributte/eet` use [Composer](https://getcomposer.com).
+
+```
+composer install contributte/eet
+```
+
+
 ## Documentation
 
 - [Setup](.docs/README.md#setup)
