@@ -11,13 +11,6 @@
     Website 🚀 <a href="https://contributte.org">contributte.org</a> | Contact 👨🏻‍💻 <a href="https://filipsedivy.cz">filipsedivy.cz</a> | Twitter 🐦 <a href="https://twitter.com/contributte">@contributte</a>
 </p>
 
-
-## Version
-
-| State | Version      | Branch   | Nette  | PHP      |
-|-------|--------------|----------|--------|----------|
-| dev   | `dev-master` | `master` | `3.0+` | `>= 7.1` |
-
 ## Usage
 
 To install latest version of `contributte/eet` use [Composer](https://getcomposer.com).
@@ -26,12 +19,18 @@ To install latest version of `contributte/eet` use [Composer](https://getcompose
 composer install contributte/eet
 ```
 
-
 ## Documentation
 
 - [Setup](.docs/README.md#setup)
 - [Configuration](#configuration)
 - [Usage](.docs/README.md#usage)
+
+## Versions
+
+| State | Version      | Branch   | Nette  | PHP      |
+|-------|--------------|----------|--------|----------|
+| dev   | `dev-master` | `master` | `3.0+` | `>= 7.1` |
+
 
 ## Maintainers
 
@@ -55,3 +54,8 @@ composer install contributte/eet
     </tr>
   </tbody>
 </table>
+
+-----
+
+Consider to [support](https://contributte.com/partners) **contributte** development team.
+Also thank you for using this package. Thanks.
