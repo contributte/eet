@@ -1,20 +1,23 @@
-# EET
+<h1 align="center">EET integration into Nette</h1>
 
-Ultra easy-to-use [`filipsedivy/php-eet`](https://github.com/filipsedivy/php-eet) implementation for [`Nette Framework`](https://github.com/nette/).
+<p align="center">
+  <a href="https://travis-ci.org/contributte/eet"><img src="https://img.shields.io/travis/contributte/eet.svg?style=flat-square"></a>
+  <a href="https://coveralls.io/r/contributte/eet"><img src="https://img.shields.io/coveralls/contributte/eet.svg?style=flat-square"></a>
+  <a href="https://packagist.org/packages/contributte/eet"><img src="https://img.shields.io/packagist/dm/contributte/eet.svg?style=flat-square"></a>
+  <a href="https://packagist.org/packages/contributte/eet"><img src="https://img.shields.io/packagist/v/contributte/eet.svg?style=flat-square"></a>
+</p>
 
-[![Build Status](https://img.shields.io/travis/contributte/eet.svg?style=flat-square)](https://travis-ci.org/contributte/eet)
-[![Code coverage](https://img.shields.io/coveralls/contributte/eet.svg?style=flat-square)](https://coveralls.io/r/contributte/eet)
-[![Licence](https://img.shields.io/packagist/l/contributte/eet.svg?style=flat-square)](https://packagist.org/packages/contributte/eet)
-[![Downloads this Month](https://img.shields.io/packagist/dm/contributte/eet.svg?style=flat-square)](https://packagist.org/packages/contributte/eet)
-[![Downloads total](https://img.shields.io/packagist/dt/contributte/eet.svg?style=flat-square)](https://packagist.org/packages/contributte/eet)
-[![Latest stable](https://img.shields.io/packagist/v/contributte/eet.svg?style=flat-square)](https://packagist.org/packages/contributte/eet)
-[![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
+<p align=center>
+    Website 🚀 <a href="https://contributte.org">contributte.org</a> | Contact 👨🏻‍💻 <a href="https://filipsedivy.cz">filipsedivy.cz</a> | Twitter 🐦 <a href="https://twitter.com/contributte">@contributte</a>
+</p>
 
-## Version
+## Usage
 
-| State       | Version      | Branch   | PHP      | Composer                                        |
-|-------------|--------------|----------|----------|-------------------------------------------------|
-| development | `dev-master` | `master` | `>= 7.1` | `minimum-stability: dev`, `prefer-stable: true` |
+To install latest version of `contributte/eet` use [Composer](https://getcomposer.com).
+
+```
+composer install contributte/eet
+```
 
 ## Documentation
 
@@ -22,25 +25,25 @@ Ultra easy-to-use [`filipsedivy/php-eet`](https://github.com/filipsedivy/php-eet
 - [Configuration](#configuration)
 - [Usage](.docs/README.md#usage)
 
-## Maintainers
+## Versions
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-        <a href="https://github.com/filipsedivy">
-            <img width="150" height="150" src="https://avatars2.githubusercontent.com/u/5647591?v=3&s=150">
-        </a>
-        </br>
-        <a href="https://github.com/filipsedivy">Filip Šedivý</a>
-      </td>
-      <td align="center">
-        <a href="https://github.com/f3l1x">
-            <img width="150" height="150" src="https://avatars2.githubusercontent.com/u/538058?v=3&s=150">
-        </a>
-        </br>
-        <a href="https://github.com/f3l1x">Milan Felix Šulc</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| State | Version      | Branch   | Nette  | PHP      |
+|-------|--------------|----------|--------|----------|
+| dev   | `dev-master` | `master` | `3.0+` | `>= 7.1` |
+
+## Development
+
+See [how to contributte](https://contributte.org) to this package. This package is currently maintaining by these authors.
+
+<a href="https://github.com/f3l1x">
+    <img width="80" height="80" src="https://avatars2.githubusercontent.com/u/538058?v=3&s=80">
+</a>
+<a href="https://github.com/filipsedivy">
+    <img width="80" height="80" src="https://avatars0.githubusercontent.com/u/5647591?s=80&v=4">
+</a>
+
+
+-----
+
+Consider to [support](https://contributte.com/partners) **contributte** development team.
+Also thank you for using this package. Thanks.
