@@ -27,9 +27,10 @@ composer install contributte/eet
 
 ## Versions
 
-| State | Version      | Branch   | Nette  | PHP      |
-|-------|--------------|----------|--------|----------|
-| dev   | `dev-master` | `master` | `3.0+` | `>= 7.1` |
+| State  | Version    | Branch   | Nette  | PHP      |
+|--------|------------|----------|--------|----------|
+| dev    | `v0.1-dev` | `master` | `3.0+` | `>= 7.1` |
+| stable | `v0.1.0`   | `master` | `3.0+` | `>= 7.1` |
 
 ## Development
 
