@@ -1,4 +1,4 @@
-![](https://heatbadger.now.sh/github/contributte/eet/)
+<h1 align="center">EET integration into Nette</h1>
 
 <p align="center">
   <a href="https://travis-ci.org/contributte/eet"><img src="https://img.shields.io/travis/contributte/eet.svg?style=flat-square"></a>
