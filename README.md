@@ -13,10 +13,10 @@
 
 ## Usage
 
-To install latest version of `contributte/eet` use [Composer](https://getcomposer.com).
+To install latest version of `contributte/eet` use [Composer](https://getcomposer.org).
 
 ```
-composer install contributte/eet
+$ composer require contributte/eet
 ```
 
 ## Documentation
@@ -46,5 +46,5 @@ See [how to contributte](https://contributte.org) to this package. This package 
 
 -----
 
-Consider to [support](https://contributte.com/partners) **contributte** development team.
+Consider to [support](https://contributte.org/partners) **contributte** development team.
 Also thank you for using this package. Thanks.
