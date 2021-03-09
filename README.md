@@ -15,8 +15,8 @@
 
 To install latest version of `contributte/eet` use [Composer](https://getcomposer.org).
 
-```
-$ composer require contributte/eet
+```bash
+composer require contributte/eet
 ```
 
 ## Documentation
