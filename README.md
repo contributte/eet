@@ -1,19 +1,26 @@
-<h1 align="center">EET integration into Nette</h1>
+![](https://heatbadger.now.sh/github/readme/contributte/eet/)
 
-<p align="center">
-  <a href="https://travis-ci.org/contributte/eet"><img src="https://img.shields.io/travis/contributte/eet.svg?style=flat-square"></a>
-  <a href="https://coveralls.io/r/contributte/eet"><img src="https://img.shields.io/coveralls/contributte/eet.svg?style=flat-square"></a>
-  <a href="https://packagist.org/packages/contributte/eet"><img src="https://img.shields.io/packagist/dm/contributte/eet.svg?style=flat-square"></a>
-  <a href="https://packagist.org/packages/contributte/eet"><img src="https://img.shields.io/packagist/v/contributte/eet.svg?style=flat-square"></a>
+<p align=center>
+  <a href="https://github.com/contributte/eet/actions"><img src="https://badgen.net/github/checks/contributte/eet/master"></a>
+  <a href="https://coveralls.io/r/contributte/eet"><img src="https://badgen.net/coveralls/c/github/contributte/eet"></a>
+  <a href="https://packagist.org/packages/contributte/eet"><img src="https://badgen.net/packagist/dm/contributte/eet"></a>
+  <a href="https://packagist.org/packages/contributte/eet"><img src="https://badgen.net/packagist/v/contributte/eet"></a>
+</p>
+<p align=center>
+  <a href="https://packagist.org/packages/contributte/eet"><img src="https://badgen.net/packagist/php/contributte/eet"></a>
+  <a href="https://github.com/contributte/eet"><img src="https://badgen.net/github/license/contributte/eet"></a>
+  <a href="https://bit.ly/ctteg"><img src="https://badgen.net/badge/support/gitter/cyan"></a>
+  <a href="https://bit.ly/cttfo"><img src="https://badgen.net/badge/support/forum/yellow"></a>
+  <a href="https://contributte.org/partners.html"><img src="https://badgen.net/badge/sponsor/donations/F96854"></a>
 </p>
 
 <p align=center>
-    Website 🚀 <a href="https://contributte.org">contributte.org</a> | Contact 👨🏻‍💻 <a href="https://filipsedivy.cz">filipsedivy.cz</a> | Twitter 🐦 <a href="https://twitter.com/contributte">@contributte</a>
+Website 🚀 <a href="https://contributte.org">contributte.org</a> | Contact 👨🏻‍💻 <a href="https://filipsedivy.cz">filipsedivy.cz</a> | Twitter 🐦 <a href="https://twitter.com/contributte">@contributte</a>
 </p>
 
 ## Usage
 
-To install latest version of `contributte/eet` use [Composer](https://getcomposer.org).
+To install the latest version of `contributte/eet` use [Composer](https://getcomposer.org).
 
 ```bash
 composer require contributte/eet
@@ -21,9 +28,7 @@ composer require contributte/eet
 
 ## Documentation
 
-- [Setup](.docs/README.md#setup)
-- [Configuration](#configuration)
-- [Usage](.docs/README.md#usage)
+For details on how to use this package, check out our [documentation](.docs).
 
 ## Versions
 
@@ -34,17 +39,18 @@ composer require contributte/eet
 
 ## Development
 
-See [how to contributte](https://contributte.org) to this package. This package is currently maintaining by these authors.
+See [how to contribute](https://contributte.org/contributing.html) to this package.
+
+This package is currently maintaining by these authors.
 
 <a href="https://github.com/f3l1x">
-    <img width="80" height="80" src="https://avatars2.githubusercontent.com/u/538058?v=3&s=80">
+  <img width="80" height="80" src="https://avatars2.githubusercontent.com/u/538058?v=3&s=80">
 </a>
 <a href="https://github.com/filipsedivy">
-    <img width="80" height="80" src="https://avatars0.githubusercontent.com/u/5647591?s=80&v=4">
+  <img width="80" height="80" src="https://avatars0.githubusercontent.com/u/5647591?s=80&v=4">
 </a>
-
 
 -----
 
-Consider to [support](https://contributte.org/partners) **contributte** development team.
-Also thank you for using this package. Thanks.
+Consider to [support](https://contributte.org/partners.html) **contributte** development team.
+Also thank you for using this package.
