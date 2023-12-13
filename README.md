@@ -1,22 +1,25 @@
-![](https://heatbadger.now.sh/github/readme/contributte/eet/)
+![](https://heatbadger.now.sh/github/readme/contributte/thumbator/?deprecated=1)
 
 <p align=center>
-  <a href="https://github.com/contributte/eet/actions"><img src="https://badgen.net/github/checks/contributte/eet/master"></a>
-  <a href="https://coveralls.io/r/contributte/eet"><img src="https://badgen.net/coveralls/c/github/contributte/eet"></a>
-  <a href="https://packagist.org/packages/contributte/eet"><img src="https://badgen.net/packagist/dm/contributte/eet"></a>
-  <a href="https://packagist.org/packages/contributte/eet"><img src="https://badgen.net/packagist/v/contributte/eet"></a>
-</p>
-<p align=center>
-  <a href="https://packagist.org/packages/contributte/eet"><img src="https://badgen.net/packagist/php/contributte/eet"></a>
-  <a href="https://github.com/contributte/eet"><img src="https://badgen.net/github/license/contributte/eet"></a>
-  <a href="https://bit.ly/ctteg"><img src="https://badgen.net/badge/support/gitter/cyan"></a>
-  <a href="https://bit.ly/cttfo"><img src="https://badgen.net/badge/support/forum/yellow"></a>
-  <a href="https://contributte.org/partners.html"><img src="https://badgen.net/badge/sponsor/donations/F96854"></a>
+    <a href="https://bit.ly/ctteg"><img src="https://badgen.net/badge/support/gitter/cyan"></a>
+    <a href="https://bit.ly/cttfo"><img src="https://badgen.net/badge/support/forum/yellow"></a>
+    <a href="https://contributte.org/partners.html"><img src="https://badgen.net/badge/sponsor/donations/F96854"></a>
 </p>
 
 <p align=center>
-Website 🚀 <a href="https://contributte.org">contributte.org</a> | Contact 👨🏻‍💻 <a href="https://filipsedivy.cz">filipsedivy.cz</a> | Twitter 🐦 <a href="https://twitter.com/contributte">@contributte</a>
+    Website 🚀 <a href="https://contributte.org">contributte.org</a> | Contact 👨🏻‍💻 <a href="https://f3l1x.io">f3l1x.io</a> | Twitter 🐦 <a href="https://twitter.com/contributte">@contributte</a>
 </p>
+
+## Disclaimer
+
+| :warning: | This project is no longer being maintained.
+|---|---|
+
+| Composer | [`contributte/eet`](https://packagist.org/contributte/eet) |
+|---|------------------------------------------------------------|
+| Version | ![](https://badgen.net/packagist/v/contributte/eet)      |
+| PHP | ![](https://badgen.net/packagist/php/contributte/eet)    |
+| License | ![](https://badgen.net/github/license/contributte/eet)   |
 
 ## Usage
 
@@ -28,20 +31,100 @@ composer require contributte/eet
 
 ## Documentation
 
-For details on how to use this package, check out our [documentation](.docs).
+### Setup
 
-## Versions
+Install package
 
-| State  | Version    | Branch   | Nette  | PHP      |
-|--------|------------|----------|--------|----------|
-| dev    | `v0.1-dev` | `master` | `3.0+` | `>= 7.1` |
-| stable | `v0.1.0`   | `master` | `3.0+` | `>= 7.1` |
+```bash
+composer require contributte/eet
+```
+
+Register extension
+
+```neon
+extensions:
+	eet: Contributte\EET\DI\EETExtension
+
+eet:
+	certificate:
+		path: %appDir%/../eet.p12
+		password: my-password
+```
+
+### Configuration
+
+```neon
+eet:
+	certificate:
+		path: %appDir%/../eet.p12
+		password: my-password
+
+	dispatcher:
+		# Dispatcher setting
+		service: production / playground
+		validate: true / false
+
+	receipt:
+		# Set default receipt values
+		id_pokl: 19903
+		dic_popl: CZ1234
+```
+
+### Usage
+
+#### Client usage
+
+```php
+use Contributte\EET;
+use FilipSedivy;
+use Nette;
+
+final class SomePresenter extends Nette\Application\UI\Presenter
+{
+	/** @var EET\Dispatcher */
+	private $client;
+
+	/** @var EET\ReceiptFactory */
+	private $receiptFactory;
+
+	public function injectClientFactory(EET\ClientFactory $factory)
+	{
+		$this->client = $factory->create();
+	}
+
+	public function injectReceiptFactory(EET\ReceiptFactory $factory)
+	{
+		$this->receiptFactory = $factory;
+	}
+
+	public function processPayment()
+	{
+		$receipt = $this->receiptFactory->create();
+		$receipt->porad_cis = '1';
+		$receipt->celk_trzba = 500;
+
+		try {
+			$this->client->send($receipt);
+
+			$this->payment->eet->save_success($this->client->getFik(), $this->client->getPkp());
+
+		} catch (FilipSedivy\EET\Exceptions\EET\ClientException $clientException) {
+			$this->payment->eet->save_error($clientException->getPkp(), $clientException->getBkp());
+
+		}  catch (FilipSedivy\EET\Exceptions\EET\ErrorException $errorException) {
+			echo '(' . $errorException->getCode() . ') ' . $errorException->getMessage();
+
+		} catch(FilipSedivy\EET\Exceptions\Receipt\ConstraintViolationException $constraintViolationException){
+			echo implode('<br>', $constraintViolationException->getErrors());
+
+		}
+	}
+}
+```
 
 ## Development
 
-See [how to contribute](https://contributte.org/contributing.html) to this package.
-
-This package is currently maintaining by these authors.
+This package was maintained by these authors.
 
 <a href="https://github.com/f3l1x">
   <img width="80" height="80" src="https://avatars2.githubusercontent.com/u/538058?v=3&s=80">
