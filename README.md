@@ -1,4 +1,4 @@
-![](https://heatbadger.now.sh/github/readme/contributte/thumbator/?deprecated=1)
+![](https://heatbadger.now.sh/github/readme/contributte/eet/?deprecated=1)
 
 <p align=center>
     <a href="https://bit.ly/ctteg"><img src="https://badgen.net/badge/support/gitter/cyan"></a>
@@ -15,7 +15,7 @@
 | :warning: | This project is no longer being maintained.
 |---|---|
 
-| Composer | [`contributte/eet`](https://packagist.org/contributte/eet) |
+| Composer | [`contributte/eet`](https://packagist.org/packages/contributte/eet) |
 |---|------------------------------------------------------------|
 | Version | ![](https://badgen.net/packagist/v/contributte/eet)      |
 | PHP | ![](https://badgen.net/packagist/php/contributte/eet)    |
